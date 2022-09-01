@@ -1,0 +1,183 @@
+/*
+    Author: Codetopia Community
+    Codetopia Final
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+    --cl-red: hsl(0, 100%, 74%);
+    --cl-green: hsl(154, 59%, 51%);
+    --cl-blue: hsl(248, 32%, 49%);
+    --d-blue: hsl(249, 10%, 26%);
+    --g-blue: hsl(246, 25%, 77%);
+    --desk-image: url('../images/bg-intro-desktop.png');
+    --mobile-image: url('../images/bg-intro-mobile.png');
+}
+
+*, 
+*::before, 
+*::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--mobile-image), var(--cl-red);
+    background-size: cover;
+    padding: 85px 15px;
+    line-height: 1.5;
+    font-size: 100%;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-family: inherit;
+}
+
+.title {
+    font-size: 22px;
+    padding: 0 3px;
+    margin-block-end: 14px;
+}
+
+.text {
+    font-size: 13px;
+}
+
+/* Right Section */
+
+.right-side {
+    margin-block-start: 30px;
+}
+
+.free a {
+    color: white;
+}
+
+.free {
+    background-color: var(--cl-blue);
+    color: #fff;
+    padding: 15px 25px;
+    font-weight: 600;
+}
+
+.free span {
+    font-weight: 200;
+}
+
+form {
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 20px 0;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 12px;
+}
+.form-group input {
+    margin-top: 16px;
+    border:  1px solid var(--g-blue);
+    border-radius: 3px;
+}
+
+::placeholder {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.trail {
+    font-size: 12px;
+    width: 80%;
+    text-transform: uppercase;
+    background-color: var(--cl-green);
+    font-weight: 500;
+    color: white;
+    font-family: inherit;
+    margin-block-start: 16px;
+}
+
+.terms {
+    color: var(--g-blue);
+    font-size: 9px;
+    width: 80%;
+    margin-top: 7px;
+    margin-inline: auto;
+}
+
+.terms span {
+    font-weight: 600;
+    color: var(--cl-red);
+}
+
+@media screen and (min-width: 498px) {
+    body {
+        background: var(--desk-image), var(--cl-red);
+    }
+    .container {
+        max-width: 494px;
+    }
+    .title {
+        font-size: 25px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .container {
+        display: flex;
+        min-width: 54rem;
+        gap: 48px;
+    }
+
+    .left-side {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title {
+        font-size: 40px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .left-side {
+        width: 50%;
+    }
+    
+    .right-side {
+        width: 50%;
+    }
+
+    .free {
+        width: 100%;
+    }
+}
